@@ -1,0 +1,55 @@
+/* ============================================================
+   BASE.CSS — Reset, variables globales, body, layout general
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sand: #e8ddd0;
+  --sand-dark: #c9b89e;
+  --plum: #6b4f6b;
+  --plum-light: #8a6a8a;
+  --white: #f9f7f4;
+  --text: #2c2c2c;
+  --text-light: #5a5a5a;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background: var(--white);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── MAIN CONTENT ── */
+.main {
+  margin-left: 72px;
+  width: calc(100% - 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── SCREENS ── */
+.screen {
+  display: none;
+  width: 100%;
+}
+.screen.active {
+  display: block;
+}
+
+/* ── RESPONSIVE BASE ── */
+@media (max-width: 600px) {
+  .main {
+    margin-left: 52px;
+    width: calc(100% - 52px);
+  }
+}

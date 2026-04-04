@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Layout Site</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="full-bleed.css" />
+    <link rel="stylesheet" href="six-cards.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <button class="active" onclick="showScreen('fullbleed', this)">
+        Full<br />Bleed
+      </button>
+      <button onclick="showScreen('sixcards', this)">Six<br />Cards</button>
+      <button onclick="showScreen('gallery', this)">Gallery</button>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- PANTALLA 1: Full Bleed -->
+      <div id="fullbleed" class="screen active">
+        <div class="fullbleed-section">
+          <p>
+            Skate ipsum dolor sit amet, face plant grab Primo slide fast plant
+            transfer. Crailtap melancholy Japan air trucks snake. Nose grab
+            g-turn cess slide launch ramp full pipe. Tail Cross Bones hang up
+            locals nose grab hand rail. Flypaper air rail chicken wing
+            tuna-flip. Trucks flypaper goofy footed bail betty. Ledge airwalk
+            helipop hang ten Kevin Harris. Half-flip sick birdie face plant Ed
+            Templeton Japan air. Mongo crail grab acid drop lien air regular
+            footed.
+          </p>
+        </div>
+        <img
+          class="fullbleed-image"
+          src="https://picsum.photos/seed/teapot/1920/500"
+          alt="Full bleed image"
+        />
+        <div class="fullbleed-section" style="padding-top: 48px">
+          <p>
+            Hardware rad noseblunt slide Slimeballs chicken wing crailtap.
+            Frigid air gap method air nose face plant. Grab risers John Grigley
+            cess slide regular footed slob air. G-turn melancholy axle spine
+            durometer Steve Severin. Coper 180 mute-air bail full-cab. Snake
+            slob air nosepicker skater Mike Carroll fakie out. Japan air bigspin
+            rail flypaper chicken wing melancholy axle. Stalefish pivot fakie
+            invert camel back nosegrind. Mongo crail grab lien air regular
+            footed.
+          </p>
+        </div>
+      </div>
+
+      <!-- PANTALLA 2: Six Cards -->
+      <div id="sixcards" class="screen">
+        <div class="cards-grid">
+          <div class="card">
+            <img
+              class="card-avatar"
+              src="https://picsum.photos/seed/avatar1/80/80"
+              alt="avatar"
+            />
+            <img
+              class="card-img"
+              src="https://picsum.photos/seed/eiffel/600/200"
+              alt="card"
+            />
+            <div class="card-body">
+              <div class="card-features">
+                <span class="card-feature">No hidden fees</span>
+                <span class="card-feature">Start living the new way</span>
+                <span class="card-feature">Perfect View</span>
+                <span class="card-feature">Get crystal clear audio</span>
+              </div>
+              <button class="card-btn">more info</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-avatar"
+              src="https://picsum.photos/seed/avatar2/80/80"
+              alt="avatar"
+            />
+            <img
+              class="card-img"
+              src="https://picsum.photos/seed/desk/600/200"
+              alt="card"
+            />
+            <div class="card-body">
+              <div class="card-features">
+                <span class="card-feature">No hidden fees</span>
+                <span class="card-feature">Start living the new way</span>
+                <span class="card-feature">Perfect View</span>
+                <span class="card-feature">Get crystal clear audio</span>
+              </div>
+              <button class="card-btn">more info</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-avatar"
+              src="https://picsum.photos/seed/avatar3/80/80"
+              alt="avatar"
+            />
+            <img
+              class="card-img"
+              src="https://picsum.photos/seed/waterfall/600/200"
+              alt="card"
+            />
+            <div class="card-body">
+              <div class="card-features">
+                <span class="card-feature">No hidden fees</span>
+                <span class="card-feature">Start living the new way</span>
+                <span class="card-feature">Perfect View</span>
+                <span class="card-feature">Get crystal clear audio</span>
+              </div>
+              <button class="card-btn">more info</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-avatar"
+              src="https://picsum.photos/seed/avatar4/80/80"
+              alt="avatar"
+            />
+            <img
+              class="card-img"
+              src="https://picsum.photos/seed/strawberry/600/200"
+              alt="card"
+            />
+            <div class="card-body">
+              <div class="card-features">
+                <span class="card-feature">No hidden fees</span>
+                <span class="card-feature">Start living the new way</span>
+                <span class="card-feature">Perfect View</span>
+                <span class="card-feature">Get crystal clear audio</span>
+              </div>
+              <button class="card-btn">more info</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-avatar"
+              src="https://picsum.photos/seed/avatar5/80/80"
+              alt="avatar"
+            />
+            <img
+              class="card-img"
+              src="https://picsum.photos/seed/diver/600/200"
+              alt="card"
+            />
+            <div class="card-body">
+              <div class="card-features">
+                <span class="card-feature">No hidden fees</span>
+                <span class="card-feature">Start living the new way</span>
+                <span class="card-feature">Perfect View</span>
+                <span class="card-feature">Get crystal clear audio</span>
+              </div>
+              <button class="card-btn">more info</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-avatar"
+              src="https://picsum.photos/seed/avatar6/80/80"
+              alt="avatar"
+            />
+            <img
+              class="card-img"
+              src="https://picsum.photos/seed/pencils/600/200"
+              alt="card"
+            />
+            <div class="card-body">
+              <div class="card-features">
+                <span class="card-feature">No hidden fees</span>
+                <span class="card-feature">Start living the new way</span>
+                <span class="card-feature">Perfect View</span>
+                <span class="card-feature">Get crystal clear audio</span>
+              </div>
+              <button class="card-btn">more info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANTALLA 3: Gallery -->
+      <div id="gallery" class="screen">
+        <div class="gallery-grid">
+          <figure class="g g1">
+            <img src="https://picsum.photos/seed/pic1/800/" alt="" />
+          </figure>
+          <figure class="g g2">
+            <img src="https://picsum.photos/seed/pic2/800/" alt="" />
+          </figure>
+          <figure class="g g3">
+            <img src="https://picsum.photos/seed/pic3/800/" alt="" />
+          </figure>
+          <figure class="g g4">
+            <img src="https://picsum.photos/seed/pic4/800/" alt="" />
+          </figure>
+          <figure class="g g5">
+            <img src="https://picsum.photos/seed/pic5/800/" alt="" />
+          </figure>
+          <figure class="g g6">
+            <img src="https://picsum.photos/seed/pic6/800/" alt="" />
+          </figure>
+          <figure class="g g7">
+            <img src="https://picsum.photos/seed/pic7/800/" alt="" />
+          </figure>
+          <figure class="g g8">
+            <img src="https://picsum.photos/seed/pic8/800/" alt="" />
+          </figure>
+          <figure class="g g9">
+            <img src="https://picsum.photos/seed/pic9/800/" alt="" />
+          </figure>
+          <figure class="g g10">
+            <img src="https://picsum.photos/seed/pic10/800/" alt="" />
+          </figure>
+          <figure class="g g11">
+            <img src="https://picsum.photos/seed/pic11/800/" alt="" />
+          </figure>
+          <figure class="g g12">
+            <img src="https://picsum.photos/seed/pic12/800/" alt="" />
+          </figure>
+          <figure class="g g13">
+            <img src="https://picsum.photos/seed/pic13/800/" alt="" />
+          </figure>
+          <figure class="g g14">
+            <img src="https://picsum.photos/seed/pic14/800/" alt="" />
+          </figure>
+          <figure class="g g15">
+            <img src="https://picsum.photos/seed/pic15/800/" alt="" />
+          </figure>
+          <figure class="g g16">
+            <img src="https://picsum.photos/seed/pic16/800/" alt="" />
+          </figure>
+          <figure class="g g17">
+            <img src="https://picsum.photos/seed/pic17/800/" alt="" />
+          </figure>
+          <figure class="g g18">
+            <img src="https://picsum.photos/seed/pic18/800/" alt="" />
+          </figure>
+          <figure class="g g19">
+            <img src="https://picsum.photos/seed/pic19/800/" alt="" />
+          </figure>
+          <figure class="g g20">
+            <img src="https://picsum.photos/seed/pic20/800/" alt="" />
+          </figure>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
