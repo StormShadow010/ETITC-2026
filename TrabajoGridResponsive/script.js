@@ -8,3 +8,8 @@ function showScreen(id, btn) {
   document.getElementById(id).classList.add("active");
   btn.classList.add("active");
 }
+
+function goBack() {
+  const firstBtn = document.querySelector(".sidebar button");
+  showScreen("fullbleed", firstBtn);
+}
