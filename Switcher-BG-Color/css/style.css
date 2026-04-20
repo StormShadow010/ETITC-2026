@@ -1,0 +1,364 @@
+/* ============================================
+   FUENTES
+   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500&display=swap");
+
+/* ============================================
+   RESET
+   ============================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   VARIABLES — TEMA CLARO (default)
+   ============================================ */
+:root {
+  --color-bg: #f5f0ea;
+  --color-text: #1a1a1a;
+  --color-accent: #d4521a;
+  --color-surface: #ffffff;
+  --color-muted: #6b6560;
+  --color-border: #d6d0c8;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+
+  --radius: 16px;
+  --max-width: 1100px;
+  --color-bg-boton: #ffff;
+  --color-text-boton: rgb(0, 0, 0);
+}
+
+/* ============================================
+   TEMAS
+   ============================================ */
+body.dark {
+  --color-bg: #1c1c1c;
+  --color-text: #f0ece6;
+  --color-surface: #2a2a2a;
+  --color-muted: #9a9590;
+  --color-border: #3a3a3a;
+  --color-bg-boton: #1c1c1c;
+  --color-text-boton: #ffff;
+}
+
+body.blue {
+  --color-bg: #e8f0fe;
+  --color-text: #0d1b4b;
+  --color-surface: #d4e4fd;
+  --color-muted: #4a6090;
+  --color-border: #a8c4f0;
+  --color-bg-boton: #e8f0fe;
+  --color-text-boton: #0d1b4b;
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* ============================================
+   NAVBAR — móvil
+   ============================================ */
+header {
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.4s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   HERO — móvil (una columna)
+   ============================================ */
+#hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 60px 0;
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.badge {
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  transition: border-color 0.4s ease;
+}
+h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+h1 em {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.hero-content p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  /* max-width: 90%; */
+  margin-bottom: 32px;
+  transition: color 0.4s ease;
+  text-align: center;
+}
+/* Botones de tema */
+.theme-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.theme-buttons button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-buttons button:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.theme-buttons button.active {
+  background: var(--color-bg-boton);
+  border-color: var(--color-accent);
+  color: var(--color-text-boton);
+}
+
+/* Placeholder imagen hero */
+.hero-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #f2a07a, #e8785a, #c45a3a, #f0c0a0);
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* ============================================
+   FEATURES — móvil (una columna)
+   ============================================ */
+#features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 60px 0;
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition:
+    background-color 0.4s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+}
+
+.card-image--dark {
+  background: linear-gradient(135deg, #2a2a2a, #4a4a4a, #3a3530);
+}
+
+.card-image--warm {
+  background: linear-gradient(135deg, #f2a07a, #e8c060, #d4521a);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.card-body h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.card-body p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  transition: color 0.4s ease;
+}
+
+/* ============================================
+   CTA
+   ============================================ */
+#cta {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#cta h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 4vw, 2.4rem);
+  margin-bottom: 16px;
+}
+
+#cta p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  transition: color 0.4s ease;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: 24px 0;
+  text-align: center;
+  transition: border-color 0.4s ease;
+}
+
+footer p {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  transition: color 0.4s ease;
+}
+
+/* ============================================
+   TABLET — min-width: 768px
+   ============================================ */
+@media (min-width: 768px) {
+  #features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-image {
+    height: 260px;
+  }
+
+  #hero {
+    padding: 80px 0;
+    width: 90%;
+  }
+
+  #features {
+    padding: 80px 0;
+  }
+}
+
+/* ============================================
+   DESKTOP — min-width: 1024px
+   ============================================ */
+@media (min-width: 1024px) {
+  #hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 0;
+  }
+
+  #features {
+    padding: 100px 0;
+  }
+
+  #cta {
+    padding: 100px 20px;
+  }
+
+  .card-image {
+    height: 280px;
+  }
+}
